@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(217, 247, 222, 0.596);
+}
+
+#main {
+  width: 100vw;
+  padding: 0 1rem;
+}
+
+h2 {
+  width: 100%;
+  margin: 2rem auto;
+}
+
+.comments_container {
+  position: relative;
+}
+.comment_container {
+  position: relative;
+  padding-top: 1rem;
+  border: 2px solid black;
+  margin-top: 1rem;
+}
+.comment_container.hide {
+  display: none;
+}
+.comment_container:first-child {
+  margin-top: 0;
+}
+.comment_container .postId {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  background-color: blanchedalmond;
+  border-bottom: 2px solid grey;
+  padding: 0 .5rem;
+}
+.comment_container .comment_infoBox {
+  /* display: flex; */
+  flex-direction: row;
+  padding: .5rem;
+}
+
+.comment_container .comment_infoBox .user {
+  display: flex;
+  font-size: .5rem;
+  position: relative;
+  left: 0;
+  padding-left: .5rem;
+  padding-right: 5rem;
+}
+.comment_container .comment_infoBox .user .posted_by {
+  font-style: italic;
+}
+.comment_container .comment_infoBox .user .posted_by .name {
+  font-weight: bold;
+}
+.comment_container .comment_infoBox .user .posted_by a {
+  position: absolute;
+  right: 0;
+}
+
+#loading {
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+}

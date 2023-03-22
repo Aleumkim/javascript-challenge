@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="tabs">
+    <button type="button" class="tablinks btn-stopwatch selected" onclick="openTabs(event, 'stopwatch')">Stopwatch</button>
+    <button type="button" class="tablinks btn-pomodoro-timer" onclick="openTabs(event, 'pomodoro-timer')">Pomodoro Timer</button>
+  </div>
+    <section class="container stopwatch">
+        <h1>Stopwatch</h1>
+        <div class="watch">
+          <h2 id="watch">00:00:00:00</h2>
+        </div>
+        <div class="buttons">
+          <button id="start">Start</button>
+          <button id="pause">Pause</button>
+          <button id="reset">Reset</button>
+        </div>
+    </section>
+    <section class="container pomodoro-timer">
+      <h1>Pomodoro Timer</h1>
+      <div id="countdown">
+        <div id="countdown-number"></div>
+        <svg width="200" height="200">
+          <circle class="base" cx="100" cy="100" r="80"/>
+          <circle class="sec" cx="100" cy="100" r="65"  />
+          <circle class="progress" cx="100" cy="100" r="80" stroke-dasharray = '500'  stroke-dashoffset = '0'/>
+        </svg>
+        <span class="timers" id="timers">25:00</span>
+      </div>
+  </section>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>

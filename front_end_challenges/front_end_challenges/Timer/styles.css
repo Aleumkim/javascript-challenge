@@ -1,0 +1,147 @@
+/* common css */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+:root {
+  --primary-color: rgb(135, 138, 182);
+  --primary-color-darker: rgb(36, 33, 176);
+  --primary-color-warning:rgb(255,0,0);
+  --sub-color:rgb(245, 98, 98);
+}
+* {
+  box-sizing: border-box;
+  outline: 0;
+  padding:0;
+  margin:0;
+  font-family: 'Open sans', sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--primary-color);
+  font-size: 1.3em;
+  line-height: 1.5em;
+}
+h1{
+  text-align:center;
+  margin:10px 0;
+}
+h2{
+  font-size:3em;
+  font-weight:400;
+  height: 50px;
+  width: 335px;
+}
+/*Tab css*/
+.tabs{
+  display: flex;
+  max-width: 640px;
+  margin: 10% auto  0 auto;
+}
+.tabs button{
+  width: 30%;
+  height: 40px;
+  border: 0;
+  font-size: 0.8em;
+  font-weight: 600;
+}
+.tabs button:first-child{
+  border-right-width: 0.01em;
+  border-color: var(--primary-color-darker);
+  border-style: solid;
+} 
+.tabs button:hover{
+  background-color: var(--primary-color-darker);
+  color: #ffffff;
+} 
+.selected {
+  background-color: var(--primary-color-darker);
+  color: #ffffff;
+}
+/*Stopwatch css*/
+.container{
+  max-width: 640px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px;
+  border-top: 2px solid var(--primary-color-darker);
+}
+.stopwatch{
+  display: block;
+}
+
+/*Stopwatch change class list css*/
+.paused{
+  color: var(--primary-color-warning);
+}
+.watch{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 50px 0;
+}
+.buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 10px 0;
+}
+.buttons button{
+  margin:0 5px;
+  border:none;
+  padding:10px;
+  --primary-color-darker: rgb(135, 182, 152);
+  background-color: var(--primary-color-darker);
+  color:#FFF;
+  text-transform:uppercase;
+  letter-spacing:0.1em;
+  border-radius:5px;
+}
+#countdown {
+  position: relative;
+  margin: auto;
+  height: 200px;
+  width: 200px;
+  text-align: center;
+}
+.pomodoro-timer{
+  display: none;
+}
+#countdown-number {
+  color: var(--primary-color-darker);
+  display: inline-block;
+  line-height: 40px;
+}
+svg {
+  background-color: transparent;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateZ(-90deg);
+}
+
+svg .progress {
+  stroke:  var(--primary-color-darker);
+  stroke-width: 16;
+  stroke-linecap: round;
+  fill: transparent;
+}
+svg .base {
+  stroke:  #e3e3e3;
+  stroke-width: 16;
+  fill: transparent;
+}
+svg .sec {
+  stroke:  var(--sub-color);
+  stroke-width: 5;
+  fill: transparent;
+  stroke-linecap: round;
+}
+
+.timers {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-weight: 700;
+}
